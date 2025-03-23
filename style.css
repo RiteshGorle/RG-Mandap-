@@ -1,0 +1,911 @@
+/* WebSite Name: Mandap Finder
+   Made by: Ritesh Gorle
+   Created: March 2025
+   Content: Mandap/Hall Finder
+*/
+
+
+
+/******************************/
+/*   01. BASIC CSS Style      */
+/******************************/ 
+
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: #ffe0cc;
+        }
+
+        header {
+            background:  coral;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+      .nav-links{
+    font-size: 30px;
+
+
+      }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin: 20px 29px;
+            
+        }
+        nav ul li a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+
+        }
+        .menu-toggle {
+            display: none;
+            color: black;
+            
+            
+        }
+
+
+@media (max-width: 768px) {
+  .nav-links{
+    font-size: 30px;
+     z-index: 120;
+
+      }
+
+}
+
+@media (max-width: 480px) {
+  
+
+.nav-links{
+    font-size: 30px;
+     z-index: 120;
+ background: red;
+      }      
+}
+
+
+
+
+/************************************/
+/*   02. VIDEO  BACKGROUND START    */
+/***********************************/ 
+
+/* Video Section */
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Video Background */
+#background-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+}
+
+/* Overlay Content */
+.overlay {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-family: 'Trebuchet MS', sans-serif;
+  z-index: 1;
+}
+
+.sec-2-head-1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: red;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.sec-2-head-2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.button-1 {
+  background-color: coral; 
+  border: none;
+  color: black;
+  border-radius: 30px;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button-1:hover {
+  background-color: black; 
+  border: 2px solid red;
+  color: white;
+  
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .sec-2-head-1 { font-size: 4rem; }
+  .sec-2-head-2 { font-size: 2rem; }
+}
+
+@media (max-width: 768px) {
+  .sec-2-head-1 { font-size: 3rem; }
+  .sec-2-head-2 { font-size: 1.8rem; }
+
+
+}
+
+@media (max-width: 480px) {
+  .sec-2-head-1 { font-size: 2.5rem; }
+  .sec-2-head-2 { font-size: 1.5rem; }
+
+
+}
+
+
+        
+
+/***************************************/
+/*   03. Featured Wedding Halls START  */
+/***************************************/ 
+
+        .hall-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px;
+        }
+        .hall {
+            background: coral;
+            padding: 15px;
+            border: 2px solid;
+            border-radius: 20px;
+            width: 300px;
+            text-align: center;
+        }
+        .hall img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+.view-btn{
+    background-color: black; 
+  border: none;
+  color: coral;
+  border-radius: 30px;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+
+.view-btn:hover {
+  background-color: white; 
+  border: 2px solid red;
+  color: black;
+  
+}
+
+
+
+/*************************/
+/*   04. DISCOUNT START  */
+/************************/ 
+
+/* Video Section */
+.video-section-1 {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+}
+
+/* Video Background */
+#background-video-1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 50% 70% / 50% 70%;
+
+
+}
+
+/* Overlay Content */
+.overlay-1 {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-family: 'Trebuchet MS', sans-serif;
+  z-index: 1;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+ 
+  color: red;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.button {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #04AA6D;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  h1 { font-size: 4rem; }
+  h2 { font-size: 2rem; }
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 3rem; }
+  h2 { font-size: 1.8rem; }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 1.5rem; }
+}
+
+
+
+
+
+/******************************/
+/*        05. OUR MANDAPS      */
+/******************************/  
+        .services {
+            padding: 70px 20px;
+            
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 3rem;
+            margin-bottom: 40px;
+            color: black;
+            font-weight: 600;
+            position: relative;
+             font-family: 'Cinzel Decorative';
+        }
+
+        .services h2::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: #4facfe;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .service-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .service-item {
+            flex: 1 1 calc(30% - 40px);
+            min-width: 280px;
+            background: coral;
+            color: black;
+            padding: 25px;
+            border-radius: 60% 10% / 60% 10%;
+            box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-item:hover {
+            background:white;
+            color: black;
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            border: 3px solid black;
+        }
+
+        .service-item h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            color: black;
+            font-family: 'Marko One';
+        }
+
+
+
+
+/******************************/
+/*        06. BIG SECTIONS     */
+/******************************/  
+
+.NEW-TEXT {
+  color: coral;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+
+.btn {
+  border: none;
+  border-radius: 15px;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: red;
+  color: white;
+  position: relative;
+}
+
+.ribbon {
+  width: 60px;
+  font-size: 14px;
+  padding: 4px;
+  position: absolute;
+  right: -25px;
+  top: -12px;
+  text-align: center;
+  border-radius: 25px;
+  transform: rotate(20deg);
+  background-color: #ff9800;
+  color: white;
+}
+
+
+
+
+/******************************/
+/*        07. IMAGE AND TEXT   */
+/******************************/  
+
+.NEW-TEXT-1 {
+  color: red;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+
+.ban_sec {
+  width: 100%;
+}
+.ban_img {
+  width: 100%;
+  position: relative;
+}
+.ban_img img {
+  width: 100%;
+  height: 500px;
+  border-radius: 10% 20% / 10% 10%;
+  border: 3px solid red;
+}
+.ban_text {
+  position: absolute;
+  top: 50%;
+  left: 6%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.ban_text strong {
+  font: 800 62.22px/70px "Montserrat", sans-serif;
+  
+  text-transform: uppercase;
+}
+.ban_text strong span {
+  font: 400 44.44px/52px "Montserrat", sans-serif;
+  letter-spacing: 3px;
+}
+.ban_text p {
+  font: 400 25px/30px "Montserrat", sans-serif;
+  color: #fff;
+  margin: 7px 0 25px;
+}
+.ban_text a {
+  display: inline-block;
+  font: 800 19.39px/24px "Montserrat", sans-serif;
+  background: #282828;
+  border-radius: 26px;
+  color: red;
+  padding: 12px 28px;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  text-decoration:none;
+}
+.ban_text a:hover {
+  background: #50af47;
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .ban_text p {
+    font-size: 21px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .ban_text p {
+    font-size: 17px;
+  }
+  .ban_text strong {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .ban_text strong span {
+    font-size: 37px;
+  }
+  .ban_text a {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .ban_text strong {
+    font-size: 35px;
+    line-height: 40px;
+  }
+  .ban_text strong span {
+    font-size: 28px;
+    line-height: 35px;
+    letter-spacing: 2px;
+  }
+  .ban_text p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .ban_text a {
+    font-size: 13.39px;
+    line-height: 15px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .ban_img img {
+    min-height: 290px;
+    object-fit: cover;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .ban_text strong {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    width: 100%;
+    display: block;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .ban_text strong span {
+    font-size: 22px;
+    line-height: 31px;
+    letter-spacing: 1px;
+  }
+  .ban_text {
+    left: 2%;
+  }
+}
+
+
+
+
+/******************************/
+/*        08. Tips & Ideas   */
+/******************************/ 
+
+.blog {
+        text-align: center;
+        padding: 60px 20px;
+        
+    }
+
+    .blog h2 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        color: #333;
+    }
+
+    .blog-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        justify-content: center;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .blog-card {
+        background: white;
+        border: 3px dotted black;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .blog-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    
+
+    .blog-content {
+        padding: 20px;
+    }
+
+    .blog-content h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: #222;
+    }
+
+    .blog-content p {
+        font-size: 1rem;
+        color: #555;
+    }
+
+    .read-more {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 15px;
+        background: coral;
+        color:  black;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background 0.3s ease-in-out;
+    }
+
+
+
+    .read-more:hover {
+  background-color: black; 
+  border: 2px solid red;
+  color: white ;
+  
+}
+    /* 📱 Responsive Design */
+    @media (max-width: 768px) {
+        .blog-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+
+
+
+
+/******************************/
+/*        09. ABOUT US       */
+/******************************/
+.half-half-image-text{
+  padding: 40px 0px;
+  h1{
+    color: black;
+  }
+  .content{
+    height: 100%;
+    display:flex;
+    align-items: center;
+    padding: 15px 0px;
+
+
+    p{
+      font-size: 22px;
+    }
+  }
+  .img{
+    width: 100%;
+    min-height: 320px;
+    height: 500px;
+    border-radius: 30px;
+  }
+}
+
+
+
+/******************************/
+/*        10. Testimonials    */
+/******************************/
+.testimonials {
+        text-align: center;
+        padding: 60px 20px;
+        background:coral;
+    }
+
+    .testimonials h2 {
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+    .testimonial-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .testimonial-card {
+        background: white;
+        border: 2px solid black;
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        transition: 0.3s ease-in-out;
+    }
+
+    .testimonial-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .quote {
+        font-size: 1.1rem;
+        color: #555;
+        font-style: italic;
+        margin-bottom: 15px;
+    }
+
+    .customer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .customer img {
+        width: 70px;
+        height: 70px;
+        border: 3px solid black;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+
+    .customer h4 {
+        font-size: 1.3rem;
+        color: #222;
+        margin-bottom: 5px;
+    }
+
+    .customer span {
+        font-size: 0.9rem;
+        color: #777;
+    }
+
+    /* 📱 Responsive Design */
+    @media (max-width: 768px) {
+        .testimonial-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+
+
+
+
+
+/******************************/
+/*        11. GALLERY         */
+/******************************/  
+.Gal-Heading{
+    font-size: 3rem;
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: black;
+    font-family: 'Cinzel Decorative';
+}
+
+
+div.NEW-gallery {
+  border: 2px solid coral;
+  border-radius: 30px;
+  background: coral;
+  color: white;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+div.NEW-gallery:hover {
+  border: 1px solid #777;
+  background: white;
+  color: black;
+}
+
+div.NEW-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.NEW-responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+  padding-bottom: 30px;
+}
+
+@media only screen and (max-width: 700px) {
+  .NEW-responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .NEW-responsive {
+    width: 100%;
+  }
+}
+
+
+
+
+
+/******************************/
+/*        12. FOOTER          */
+/******************************/
+
+.img-fluid{
+    border-radius: 30px;
+    border: 2px solid coral;
+   margin-bottom: 6px;
+}
+
+
+.p-4{
+    border: 3px dotted black;
+    border-radius: 20px;
+}
+
+
+
+#contact-us{
+    
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    height: 230px;
+    position: relative;
+}
+
+#contact-us .layer{
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+#contact-us p,#contact-us h2,#contact-us button{
+    z-index: 1;
+}
+
+footer #copyright {
+    background-color: #343434;
+}
+
+footer i{
+    font-size: 28px;
+    padding: 14px;
+}
+
+
+
+
+ @media screen and (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background: #ff4081;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                text-align: center;
+            }
+            nav ul.active {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .hall-list {
+                flex-direction: column;
+                align-items: center;
+            }
+            .hall {
+                width: 90%;
+            }
+            #hero {
+                padding: 100px 20px;
+            }
+        }
